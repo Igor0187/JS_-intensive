@@ -1,5 +1,5 @@
 import { test as baseTest } from '@playwright/test';
-import { GitHubHomePage, GitHubLoginPage, GitHubAutorizedPage } from '../HW6/GithubPages';
+import { GitHubHomePage, GitHubLoginPage, GitHubAutorizedPage } from '../GithubPages';
 
 const test = baseTest.extend({
   gitHome: async ({ page }, use) => {

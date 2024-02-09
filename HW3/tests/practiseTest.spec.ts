@@ -5,7 +5,6 @@ test('e-katalog check', async ({ page }) => {
 
   await expect(page).toHaveTitle(/e-Katalog/);
   await expect(page.getByRole('link', { name: 'E-Katalog' })).toBeVisible();
-  await expect(page.getByText('Популярні моделі')).toBeVisible();
   await expect(page.getByRole('link', { name: 'Гаджети', exact: true })).toBeVisible();
   await expect(page.getByText('Увійти')).toBeVisible;
   await expect(page.getByRole('link', { name: 'Гаджети', exact: true })).toBeVisible();

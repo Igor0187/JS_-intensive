@@ -57,8 +57,9 @@ test('imdb check', async ({ page }) => {
 });
 
 test('The times check', async ({ page }) => {
+  await page.waitForTimeout(200)
   await page.goto('https://www.thetimes.co.uk');
-
+  await page.waitForTimeout(200)
   await expect(page).toHaveTitle(/The Times/);
   await expect(page.getByRole('link', { name: 'times Masthead' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Log in' })).toBeVisible();
@@ -77,8 +78,9 @@ test('The times check', async ({ page }) => {
 });
 
 test('Volya check', async ({ page }) => {
+  await page.waitForTimeout(200)
   await page.goto('https://volia.com/?partner=organic_search&utm_source=google&utm_medium=organic');
-
+  await page.waitForTimeout(200)
   await expect(page).toHaveTitle(/Провайдер ВОЛЯ/);
   await expect(page.getByRole('button', { name: 'Приватним клієнтам' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Абонентам' })).toBeVisible();

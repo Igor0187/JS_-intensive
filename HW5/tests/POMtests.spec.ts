@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { EKatalogPage } from '../HW5/PageObject/EkatalogPage';
-import {OLXPage} from '../HW5/PageObject/OlxPage';
-import {IMDbPage} from '../HW5/PageObject/IMDbPage';
-import {TheTimesPage} from '../HW5/PageObject/TimesPage';
-import {VolyaPage} from '../HW5/PageObject/VolyaPage';
+import { EKatalogPage } from '../PageObject/EkatalogPage';
+import {OLXPage} from '../PageObject/OlxPage';
+import {IMDbPage} from '../PageObject/IMDbPage';
+import {TheTimesPage} from '../PageObject/TimesPage';
+import {VolyaPage} from '../PageObject/VolyaPage';
 test('Ekatlog check', async ({ page }) => {
     let ekatalog = new EKatalogPage(page);
     await ekatalog.navigate();
